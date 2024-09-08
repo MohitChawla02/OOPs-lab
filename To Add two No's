@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+class Addition{
+    private:
+    int num1, num2;
+    public:
+    Addition(int a, int b){
+        num1 =a;
+        num2 =b;
+    }
+    int Add(){
+        return num1 + num2;
+    }
+    void display(){
+        cout << "The Sum is:" << Add() << endl;
+    }
+};
+int main(){
+    Addition obj(5,10);
+    obj.display();
+    return 0;
+}
