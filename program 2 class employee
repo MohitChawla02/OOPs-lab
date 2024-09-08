@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+class employee{
+    private:
+    int Salary;
+    public:
+    void SetSalary(int S){
+        Salary='S';
+    }
+    void getSalary(){
+        cout << "Salary is:" << Salary << endl;
+    }
+};
+int main(){
+    employee myobj;
+    myobj.SetSalary(50000);
+    myobj.getSalary();
+    return 0;
+}
