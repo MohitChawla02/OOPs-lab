@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+class Subtraction{
+    private:
+    int num1, num2;
+    public:
+    Subtraction(int a, int b){
+        num1 =a;
+        num2 =b;
+    }
+    int Subtract(){
+        return num1 - num2;
+    }
+    void display(){
+        cout << "The Subtraction is:" << Subtract() << endl;
+    }
+};
+int main(){
+   Subtraction obj(25,10);
+    obj.display();
+    return 0;
+}
