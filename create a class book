@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+class Book {
+    private:
+    
+    int bookID;
+    int pages;
+    float Price;
+    public:
+    
+    void setbookID(int ID){
+        bookID = ID;
+    
+    }
+    void setpages(int pg){
+        pages = pg;
+    }
+    void setprice(float pr){
+        Price = pr;
+    }
+    int getbookID(){
+        return bookID;
+    }
+    int getpages(){
+        return pages;
+    }
+    float getprice(){
+        return Price;
+    }
+    
+    void showbookdetails(){
+        cout << "setbookID:" << bookID << endl;
+        cout << "setpages:" << pages << endl;
+        cout << "setprice:" << Price << endl;   
+        
+    }
+    
+};
+int main(){
+    Book *bobj1 = new Book();
+    Book *bobj2 = new Book();
+    bobj1->setbookID(1);
+    bobj1->setpages(100);
+    bobj1->setprice(150);
+    
+    bobj2->setbookID(2);
+    bobj2->setpages(200);
+    bobj2->setprice(300);
+    
+    cout << "costlier book:" << endl;
+    if (bobj1->getprice() < bobj2->getprice()){
+        bobj2->showbookdetails();}
+        else{
+            bobj1->showbookdetails();
+        }
+    }
+
+
