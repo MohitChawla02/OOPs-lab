@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+class person {
+protected:
+    char name[30];  
+public:
+    void read() {
+        cout << "Enter name: ";
+        cin >> name;  // Works for single word names
+    
+    }
+
+    void display() {
+        cout << "Name: " << name << endl;
+    }
+};
+
+class sport : public person {
+    int m = 50; 
+    
+public:
+    void display() {
+        cout << "Sport value: " << m << endl;  
+        person::display(); 
+    }
+};
+
+class student : public person {
+public:
+    void display() {
+        cout << "Student details: ";
+        person::display();  
+    }
+};
+
+int main() {
+    student st;
+    sport sp;
+
+    cout << "Enter student details:" << endl;
+    st.read(); 
+    cout << "Enter sport details:" << endl;
+    sp.read(); 
+
+    cout << "\nDisplaying student details:" << endl;
+    st.display(); 
+
+    cout << "\nDisplaying sport details:" << endl;
+    sp.display();
+
+    return 0;
+}
